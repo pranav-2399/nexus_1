@@ -9,6 +9,8 @@ Enter the following snippet to kick-start the backend:
    uvicorn main:app --reload
    ```
 
+Schema of **Student**:
+
    ```python
    class Student(BaseModel):
        roll_no: int
