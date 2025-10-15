@@ -3,7 +3,7 @@
 The repository contains a simple **Python backend** built with **uvicorn**, **FastAPI** and tested using **Postman**.  
 The data is stored in an array of JSON objects inside the file **`student_details.json`**.
 
-To run `main.py`:
+Enter the following snippet to kick-start the backend:
 
    ```python
    uvicorn main:app --reload
