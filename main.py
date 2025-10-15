@@ -7,7 +7,7 @@ app = FastAPI()
 class Student(BaseModel):
     name: str
     rollNo: int
-    marks: int
+    marks: list[int]
     def toJSON(self):
         return json.dumps(self, default = lambda o: o.__dict__)
 
@@ -17,14 +17,26 @@ def example():
 
 @app.get("/get_all/")
 async def get_all():
-    with open("student_details.json", "r") as f:
-        data = json.load(f)
+    try:
+        with open("student_details.json", "r") as f:
+            data = json.load(f)
+    except Exception as e:
+        return []
     return data
 
 @app.get("/get_average/")
 async def get_average():
     data = await get_all()
-    return {"average": sum([student["marks"] for student in data])/len(data)}
+    return {
+        "average": 
+            sum(
+                [
+                    sum([marks for marks in student["marks"]])
+                    /len(student["marks"]) 
+                    for student in data
+                ]
+            )/len(data)
+    }
 
 @app.post("/add/")
 async def add(request: Request):
