@@ -56,3 +56,4 @@ async def add(request: Request):
     else:
         data.append(request)
     with open("student_details.json", "w") as f: json.dump(data, f, indent = 4)
+    return {"status": "success"}
