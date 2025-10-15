@@ -1,0 +1,17 @@
+[
+    {
+        "name": "ABC",
+        "rollNo": 1234,
+        "marks": 90
+    },
+    {
+        "name": "DEF",
+        "rollNo": 3210,
+        "marks": 95
+    },
+    {
+        "name": "DeF",
+        "rollNo": 3211,
+        "marks": 96
+    }
+]
