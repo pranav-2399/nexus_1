@@ -4,6 +4,7 @@ The repository contains a simple **Python backend** built with **uvicorn**, **Fa
 The data is stored in an array of JSON objects inside the file **`student_details.json`**.
 
 To run `main.py`:
+
     ```python
     uvicorn main:app --reload
     ```
