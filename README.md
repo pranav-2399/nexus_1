@@ -5,9 +5,9 @@ The data is stored in an array of JSON objects inside the file **`student_detail
 
 To run `main.py`:
 
-    ```python
-    uvicorn main:app --reload
-    ```
+   ```python
+   uvicorn main:app --reload
+   ```
 
    ```python
    class Student(BaseModel):
