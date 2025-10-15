@@ -1,7 +1,12 @@
 # 🧠 FastAPI Student Details Backend
 
-The repository contains a simple **Python backend** built with **FastAPI** and tested using **Postman**.  
+The repository contains a simple **Python backend** built with **uvicorn**, **FastAPI** and tested using **Postman**.  
 The data is stored in an array of JSON objects inside the file **`student_details.json`**.
+
+To run `main.py`:
+    ```python
+    uvicorn main:app --reload
+    ```
 
    ```python
    class Student(BaseModel):
